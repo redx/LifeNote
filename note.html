@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>笔记</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta charset="utf-8" />
+  <link rel="stylesheet/less" type="text/css" href="less.css">
+  <script type="text/javascript" src="less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+	<script>
+  function aSubmit(){
+		document.getElementById("textForm").submit();
+	}
+
+function fastSubmit(e){
+  if(window.event)//IE
+	{
+		keynum=e.keyCode;
+		}else{
+		keynum=e.which;
+	}
+	e = window.event;
+	if(e.ctrlKey && keynum == 13)
+	{
+		aSubmit();
+	}
+}
+
+
+function layoutMiss(){
+		$("#alertbox-img").fadeOut();
+		$("#layout").fadeOut();
+		$("#layout").css(
+		{"z-index":"0",
+		}
+	);
+		$("#alertbox-img").remove();
+}
+
+$(document).ready(function(){
+	$("img").click(function(){
+	$("#layout").css(
+	{"z-index":"1003",
+	"background":"rgba(0,0,0,0.85)"
+	}
+	);
+	$("#layout").fadeIn();
+	$("body").prepend("<div id='alertbox-img'><img src='randjpg.php?path=img/flickr'></div>");
+	$("#alertbox").fadeIn();
+	});
+	$("#layout").click(function(){
+		$("#alertbox-img").fadeOut();
+		$("#layout").fadeOut();
+		$("#layout").css(
+		{"z-index":"0",
+		}
+	);
+		$("#alertbox-img").remove();
+		});
+  });
+  </script>
+ </head>
+ <body>
+  <div id="layout"></div>
+<div id="wrapper">
+	<div id="header">
+		<div id="site-title"><a href="index.html">忙碌人生</a></div>
+		<div id="site-sub-title">life on the go</div>
+	</div>
+	<div id="notepadbox">
+	<span style="color:#9B9B9B;">记录生活吧，老了看什么都是幸福的……<span><br/>
+	<br/>
+	<form id="textForm" action="note.php" method="POST">
+	<textarea id="note" class="notepad" name="note" autofocus="autofocus" onkeydown="fastSubmit(event)"></textarea><br/><br/>
+	<input type="button" value="提交"  onclick="aSubmit();">
+	</form>
+	</div>
+	<div id="sidebar">
+	<div id="flickr_box" class="sidebarbox">
+			<span style="color:#9B9B9B">flickr上的图片们</span><br/></br>
+		<img style="cursor:pointer; "src="randjpg.php?path=img/flickr" width="220" height="auto" />
+	</div>
+	</div>
+	</div><br/><br/><br/>
+	<div id="footer"><div id="ftxt">爱一个能给你带来正面能量的人，嗯，所以要爱自己 </div>
+</body>
+</html>
