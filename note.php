@@ -27,7 +27,9 @@ if($flag == 1)
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <meta charset="utf-8" />
-  <link rel="stylesheet/less" type="text/css" href="less.css">
+    　<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet/less" type="text/css" media="screen and (min-device-width: 1024px)" href="less.css">
+　　<link rel="stylesheet/less" type="text/css" media="screen and (max-device-width: 600px)" href="tinyScreen.css" />
   <script type="text/javascript" src="less-1.3.0.min.js"></script>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="redAjax.js"></script>
@@ -161,20 +163,6 @@ $(document).ready(function(){
 		clearTimeout(time2);
 		});
   });
-
-function onfocuslager() {
-	$("#note").animate({
-		height:"+=20"
-	},"fast"
-	);
-}
-
-function onblursmaller(){
-	$("#note").animate({
-		height:"-=20"
-	},"fast"
-	);
-}
   </script>
  </head>
  <body>
@@ -188,25 +176,16 @@ function onblursmaller(){
 	<span style="color:#9B9B9B;">记录生活吧，老了看什么都是幸福的……<span><br/>
 	<br/>
 	<form id="textForm" action="notesub.php" method="POST">
-	<textarea id="note" class="notepad" name="note" onfocus="onfocuslager();" onblur="onblursmaller();" autofocus='autofocus' onkeydown="fastSubmit(event)"><?php if(@$_GET['title'] != ""){echo @$_GET['title']."-"; } ?><?php echo @$_GET['url']; ?></textarea><br/><br/>
+	<textarea id="note" class="notepad" name="note"  autofocus='autofocus' onkeydown="fastSubmit(event)"><?php if(@$_GET['title'] != ""){echo @$_GET['title']."-"; } ?><?php echo @$_GET['url']; ?></textarea><br/><br/>
 	<input id="tags" name="tags" type="input" onkeydown="fastSubmit(event)" value=<?php if(@$_GET['source'] == 'bookmark'){echo "网址,摘录";}  ?> ></input><br/><br/>	
 	<input type="button" value="提交"  onClick="aSubmit();"> 
 	<a href="diary.php" >查看笔记</a>
 	<a href="login.php?logout=1" >退出登录</a>
 	</form>
 	</div>
-	<div id="sidebar">
-	<div id="flickr_box" class="sidebarbox">
-			<span style="color:#9B9B9B">flickr上的图片们</span><br/></br>
-		<img id="flickr" style="cursor:pointer; "src="<?echo $path; ?>" width="220" height="auto" />
-	</div>
-	<div class="sidebarbox" ondragover="dropStart();" ondrop="dropIt();" ondragleave="dropLeave();"><div id="imgUpload"><div id="alert-text">图片拖放上传</div><img id="uploadPreview" width=230 src="" /></div><br/>
-		<input id="uploadbox" type="file"  value="选择图片" />
-		<input id="" type="button" value="确认上传" onclick="upload();" />
-	</div>
 	</div>	
 	</div><br/><br/><br/>
-	<div id="footer"><div id="ftxt">爱一个能给你带来正面能量的人，嗯，所以要爱自己 </div>
+
 </body>
 </html>
 

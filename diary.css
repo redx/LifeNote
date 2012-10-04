@@ -32,7 +32,18 @@ a{
 		color:@blue - 100;
 		}
 	}
-#diaryWrapper{
+@media screen and (max-device-width:500px){
+    #diaryWrapper{
+		a{
+		font:@font;
+		}
+		margin:0 auto;
+		margin-bottom:20px;
+		.box (100%);
+    }
+}
+@media screen and (min-device-width:1024px){
+    #diaryWrapper{
 		a{
 		font:@font;
 		}
@@ -40,13 +51,15 @@ a{
 		margin-top:20px;
 		margin-bottom:20px;
 		.box (400px);
-		}
-	#diaryHead{
+    }
+    #diaryHead{
 		margin-bottom:20px;
 		width:400px;
 		height:266px;
 		background:url("img/bk.jpg") no-repeat;
 		}
+}
+
 	.everyNote{
 		font:@font;
 		border:1px #EEE solid;

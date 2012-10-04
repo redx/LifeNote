@@ -1,0 +1,15 @@
+<Files ~ "^.(htaccess|htpasswd)$">
+deny from all
+</Files>
+AuthUserFile /var/www/less/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+require valid-user 
+ErrorDocument 400 bad
+ErrorDocument 404 fuck!!!!!!
+order deny,allow
+RewriteEngine On
+RewriteRule tests  diary.php
+RewriteRule ^([0-9]+)$ /diary.php?page=$1
+

@@ -19,7 +19,7 @@ function getImgLinks($dir)
 
 if(@$_GET['rand'] == '1')
 {
-	$imgs = getImgLinks('img/flickr');
+	$imgs = getImgLinks('img');
 	$imgs = $imgs[rand(0,(count($imgs)-1))];
 	echo $imgs;
 }

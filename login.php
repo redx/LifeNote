@@ -16,8 +16,8 @@ if(@$_POST['name'])
 	if($flag == 1)
 	{	
 		$en_password = md5($_POST['password']);
-		setcookie("name", "$_POST[name]", time()+360000);
-		setcookie("password", "$en_password", time()+360000);
+		setcookie("name", "$_POST[name]", time()+(20 * 365 * 24 * 3600));
+		setcookie("password", "$en_password", time()+(20 * 365 * 24 * 3600);
 		echo "<head><script>window.location = '$_SERVER[HTTP_REFERER]'</script></head>";
 	}else{
 		echo "<head><script>window.location = '$_SERVER[HTTP_REFERER]'</script></head>";

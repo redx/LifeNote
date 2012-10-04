@@ -5,7 +5,7 @@
 @font:normal  12px Helvetica,Tahoma,SimSun,sans-serif,Hei;
 
 
-.box (@width:500px) {
+.box (@width:36%) {
 	padding:10px;
 	border-radius:@radius;
 	-webkit-border-radius:@radius;
@@ -49,13 +49,13 @@ a{
 	display:none;
 }
 #wrapper{
-	width:800px;
+	width:58%;
 	margin:0 auto;
 	}
 
 #header{
 	margin-top:30px;
-	.box(500px);
+	.box(100%);
 	display:block;
 	#site-title{
 		font:normal  30px Microsoft YaHei,Helvetica,Tahoma,SimSun,sans-serif,Hei;
@@ -79,7 +79,7 @@ a{
 	}
 
 	.post{
-		.box(500px);
+		.box(36%);
 		font:normal  12px Helvetica,Tahoma,SimSun,sans-serif,Hei;
 		color:@black;
 		margin-top:20px;
@@ -91,13 +91,13 @@ a{
 
 	#notepadbox{
 		float:left;
-		.box(500px);
+		.box(100%);
 		margin-top:20px;
 		margin-bottom:43px;
 		font:normal  12px Helvetica,Tahoma,SimSun,sans-serif,Hei;
 		.notepad{
-			width:488px;
-			height:330px;
+			width:95%;
+			height:300px;
 			border:1px solid #CCC;
 			webkit-border-radius:3px;
 			border-radius:3px;
@@ -112,7 +112,7 @@ a{
 				}
 			}
 		#tags{
-			width:488px;
+			width:35.7%;
 			border:1px solid #CCC;
 			webkit-border-radius:3px;
 			border-radius:3px;
@@ -129,12 +129,12 @@ a{
 		}
 
 	#sidebar{
-		width:250px;
+		width:18.3%;
 		margin-top:20px;
 		float:right;
 		font:normal  12px Helvetica,Tahoma,SimSun,sans-serif,Hei;
 		#about{
-			.box(250px);
+			.box(18.3%);
 			}
 		#news{
 			.box(250px);
@@ -186,8 +186,8 @@ a{
 			img{
 				cursor:pointer;
 				}
-		.box(500px);
-		height:500px;
+		.box(36%);
+		height:36%;
 		margin-top:20px;
 		margin-bottom:20px;
 		font:normal  12px Helvetica,Tahoma,SimSun,sans-serif,Hei;
@@ -202,13 +202,13 @@ a{
 		box-shadow:0px 2px 5px rgba(0, 0, 0, 0.15);
 		-moz-box-shadow:0px 2px 5px rgba(0, 0, 0, 0.15);
 		-webkit-box-shadow:0px 2px 5px rgba(0, 0, 0, 0.15);
-		width:300px;
-		height:150px;
+		width:22%;
+		height:10%;
 		background:#FFF;
 		position:fixed;
 		z-index:1004;
-		left:500px;
-		top:250px;
+		left:36.6%;
+		top:18.3%;
 		#alert-title{
 		font:normal  12px Helvetica,Tahoma,SimSun,sans-serif,Hei;
 		padding-left:50px;

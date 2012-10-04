@@ -18,8 +18,9 @@ if($flag == 1)
 	?>
 <html>
 	<head>
-		<title>每日笔记</title>
-		<link rel="stylesheet/less" type="text/css" href="diary.css">
+    <title>每日笔记</title>
+    　<meta name="viewport" content="width=device-width, initial-scale=1" />
+    		<link rel="stylesheet/less" type="text/css"  href="diary.css">
 		<script type="text/javascript" src="less-1.3.0.min.js"></script>
 	    <script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="jquery.easing.1.3.js"></script>
@@ -117,7 +118,7 @@ if($flag == 1)
 	<body onkeydown="keypress(event);">
 		<div id="bigWrapper">
 		<div id="diaryWrapper">
-		<div id="diaryHead"></div>
+		<a href="diary.php"><div id="diaryHead"></div></a>
 		<?
 		if(@$_GET['page'] == '' && @$_GET['tags'] == '')
 		{	

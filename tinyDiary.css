@@ -1,0 +1,86 @@
+@blue:#5B83AD;
+@light-blue:@blue+#111;
+@black:#000;
+@radius:3px;
+@font:normal  12px Helvetica,Tahoma,SimSun,sans-serif,Hei;
+
+
+.box (@width:480px) {
+	padding:10px;
+	border-radius:@radius;
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	box-shadow:0px 2px 5px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow:0px 2px 5px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow:0px 2px 5px rgba(0, 0, 0, 0.15);
+	border-bottom:2px solid #E2E2E2;
+	background:#fff;
+	width:@arguments;
+	}
+
+
+body{
+		margin:0;
+		padding:0;
+		background:url("img/bg1.png") fixed;
+		}
+
+a{
+	text-decoration:none;
+	color:@blue;
+	&:hover{
+		color:@blue - 100;
+		}
+	}
+#diaryWrapper{
+		a{
+		font:@font;
+		}
+		margin:0 auto;
+		margin-top:20px;
+		margin-bottom:20px;
+		.box (400px);
+		}
+	#diaryHead{
+		margin-bottom:20px;
+		width:400px;
+		height:266px;
+		background:url("img/bk.jpg") no-repeat;
+		}
+	.everyNote{
+		font:@font;
+		border:1px #EEE solid;
+		margin:5px;
+		padding:5px;
+		overflow:hidden;
+		&:hover{
+			border:1px #000 solid;
+			}
+		#wordsTime{
+			text-align:right;
+			color:#CCC;
+			}
+		.droplink{
+			display:none;
+			}
+		&:hover{
+			.droplink{
+				display:inline;
+			}
+		}
+
+		#tags{
+		text-align: left;
+		float:left;
+		a{
+			color: #DDD;
+			&:hover{
+			color: #111;
+			}
+		}
+	}
+		}
+		#timeSpend{
+			font:@font;
+			text-align: center;
+		}
